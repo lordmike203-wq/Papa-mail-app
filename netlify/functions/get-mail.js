@@ -30,7 +30,7 @@ exports.handler = async (event, context) => {
     } else if (event.queryStringParameters.domain) {
         // Fetch the inbox
         const domain = event.queryStringParameters.domain;
-        url = `httpshttps://${API_BASE}/v3/${domain}/events?event=stored`;
+        url = `https://${API_BASE}/v3/${domain}/events?event=stored`;
     } else {
         return {
             statusCode: 400,
